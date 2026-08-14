@@ -1,0 +1,17 @@
+.searchResult {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.searchResultTable {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.searchResultTable th, .searchResultTable td {
+    border: 1px solid var(--cl-grey);
+    padding: 10px;
+    text-align: left;
+}

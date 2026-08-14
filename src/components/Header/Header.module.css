@@ -1,0 +1,23 @@
+.header {
+  height: 60px;
+  border-bottom: 1px solid var(--cl-grey);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.headerLogo {
+  height: 50px;
+}
+
+.headerNav {
+  display: flex;
+  gap: 30px;
+}
+
+.headerLink {
+  text-decoration: none;
+  color: var(--cl-black);
+}

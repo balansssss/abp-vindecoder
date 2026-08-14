@@ -1,0 +1,15 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;  
+    margin-top: 50px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mainImage {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
