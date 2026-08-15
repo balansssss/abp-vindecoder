@@ -25,3 +25,13 @@ export function validateVin(vin) {
         message: null
     }
 }
+
+export function getSearchVinHistory() {
+    return JSON.parse(window.localStorage.getItem('searchHistory') || '[]');
+}
+
+export function setSearchVinHistory(vin) {
+    const searchHistory = getSearchVinHistory()
+    const updatedHistory = [vin, ...searchHistory].slice(0, 3)
+    window.localStorage.setItem('searchHistory', JSON.stringify(updatedHistory))
+}

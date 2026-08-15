@@ -7,11 +7,22 @@
 .searchResultTable {
     width: 100%;
     border-collapse: collapse;
-
 }
 
 .searchResultTable th, .searchResultTable td {
     border: 1px solid var(--cl-grey);
     padding: 10px;
     text-align: left;
+}
+
+.searchResultError {
+    background-color: var(--cl-error);
+    color: var(--cl-white);
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.searchResultWarning {
+    color: var(--cl-error);
+    font-weight: 600;
 }

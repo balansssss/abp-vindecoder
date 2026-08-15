@@ -1,0 +1,25 @@
+.history {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.searchHistoryTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.searchHistoryTable th, .searchHistoryTable td {
+    border: 1px solid var(--cl-grey);
+    padding: 10px;
+    text-align: left;
+}
+
+.searchHistoryTableLink {
+    cursor: pointer;
+}
+
+.searchHistoryTableNumber {
+    width: 10px;
+}
