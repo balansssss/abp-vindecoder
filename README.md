@@ -1,16 +1,83 @@
-# React + Vite
+# VIN Decoder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-приложение для декодирования VIN-кодов автомобилей с использованием NHTSA vPIC API. Приложение сделано в качестве тестового задания.
 
-Currently, two official plugins are available:
+## Демо
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Развернутое приложение:**  
+https://abp-vindecoder.netlify.app/
 
-## React Compiler
+## Описание проекта
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Приложение позволяет ввести VIN-код автомобиля и получить информацию о транспортном средстве через NHTSA vPIC API.
 
-## Expanding the ESLint configuration
+Перед отправкой запроса VIN проходит клиентскую валидацию. После успешного запроса полученная информация отображается в удобном виде. Также приложение обрабатывает ошибки и предупреждения, возвращаемые API.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Реализованный функционал
+
+- ввод VIN-кода и автоматическое преобразование символов в верхний регистр;
+- валидация VIN перед отправкой запроса;
+- получение информации об автомобиле через NHTSA vPIC API;
+- отображение результатов декодирования VIN;
+- обработка ошибок и предупреждений API;
+- глобальное отображение состояния загрузки во время выполнения запросов;
+- история последних поисков VIN;
+- хранение истории поиска в `localStorage`;
+- повторный поиск VIN из истории;
+- страница со списком доступных переменных vPIC API;
+- отдельная страница с подробной информацией о выбранной переменной;
+- маршрутизация приложения с помощью React Router;
+
+## Используемые технологии
+
+- React
+- JavaScript
+- React Router
+- CSS Modules
+- NHTSA vPIC API
+
+## Локальный запуск
+
+### Требования
+
+Для запуска проекта необходимо установить:
+
+- Node.js 20.19.0 или новее;
+- npm.
+
+Проверить установленные версии можно командами:
+
+```bash
+node -v
+npm -v
+```
+
+### 1. Клонирование репозитория
+
+```bash
+git clone https://github.com/balansssss/abp-vindecoder.git
+```
+
+### 2. Переход в директорию проекта
+
+```bash
+cd abp-vindecoder
+```
+
+### 3. Установка зависимостей
+
+```bash
+npm install
+```
+
+### 4. Запуск в режиме разработки
+
+```bash
+npm run dev
+```
+
+После запуска Vite выведет адрес локального сервера. Обычно приложение доступно по адресу:
+
+```text
+http://localhost:5173/
+```
