@@ -1,0 +1,24 @@
+.variables {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.variablesList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.variablesListItemLink {
+    color: var(--cl-black);
+}
+
+.variablesListItemDescription p {
+    margin: 5px 0;
+}
+
+.variablesListItemDescription ul {
+    margin: 10px 0;
+    padding-left: 15px;
+}

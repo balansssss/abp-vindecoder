@@ -1,0 +1,35 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.goback {
+    border: 1px solid var(--cl-black);
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+}
+
+.goback:hover {
+    background-color: var(--cl-main);
+    color: var(--cl-white);
+    border-color: var(--cl-main);
+}
+
+.variable {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.variableDescription p {
+    margin: 5px 0;
+}
+
+.variableDescription ul {
+    margin: 10px 0;
+    padding-left: 15px;
+}

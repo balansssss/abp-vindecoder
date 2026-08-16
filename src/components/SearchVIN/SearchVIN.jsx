@@ -1,15 +1,15 @@
 import styles from './SearchVIN.module.css'
-import { useState, useContext, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { getSearchVinHistory, setSearchVinHistory, validateVin } from '../../scripts/common.js'
 import { decodeVin } from '../../scripts/vpicApi.js'
-import { LoadingContext } from '../../App.jsx'
 import { SearchVINResult } from '../SearchVINResult/SearchVINResult.jsx'
+import { useLoading } from '../../contexts/LoadingProvider.jsx'
 
 export function SearchVIN({setSearchHistory, selectedVin}) {
     const [vin, setVin] = useState('')
     const [errorValid, setErrorValid] = useState(null)
     const [vinDetails, setVinDetails] = useState(null)
-    const { loading, setLoading } = useContext(LoadingContext)
+    const { loading, setLoading } = useLoading()
 
     const searchVin = e => {
         e.preventDefault()

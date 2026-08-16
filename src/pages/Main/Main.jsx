@@ -10,8 +10,8 @@ export function Main() {
     const [selectedVin, setSelectedVin] = useState(null)
 
     return (
-        <main className={styles.main}>
-            <h2 className={styles.mainTitle}>Type your VIN-number and search for vehicle information</h2>
+        <main className={styles.main + ' container'}>
+            <h2>Type your VIN-number and search for vehicle information</h2>
             <img className={styles.mainImage} src="/help.png" alt="Where to find your VIN" />
             <SearchVINHistory searchHistory={searchHistory} setSelectedVin={setSelectedVin}/>
             <SearchVIN  setSearchHistory={setSearchHistory} selectedVin={selectedVin}/>

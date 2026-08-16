@@ -4,16 +4,14 @@ import { Header } from './components/Header/Header.jsx'
 import { Main } from './pages/Main/Main.jsx'
 import { Variables } from './pages/Variables/Variables.jsx'
 import { Variable } from './pages/Variable/Variable.jsx'
-import { useState, createContext } from 'react'
-
-export const LoadingContext = createContext()
+import { useLoading } from './contexts/LoadingProvider.jsx'
+import { VariablesProvider } from './contexts/VariablesProvider.jsx'
 
 function App() {
 
-  const [loading, setLoading] = useState(false)
+  const {loading} = useLoading()
 
   return (
-    <LoadingContext.Provider value={{ loading, setLoading }}>
       <BrowserRouter>
         {loading && <div className="loading-overlay">Loading...</div>}
         <div className="app">
@@ -21,13 +19,14 @@ function App() {
           <div className="page">
             <Routes>
               <Route path="/" element={<Main />} />
-              <Route path="/variables" element={<Variables />} />
-              <Route path="/variables/:variableId" element={<Variable />} />
+              <Route element={<VariablesProvider />}>
+                <Route path="/variables" element={<Variables />} />
+                <Route path="/variables/:variableId" element={<Variable />} />
+              </Route>
             </Routes>
           </div>
         </div>
       </BrowserRouter>
-    </LoadingContext.Provider>
   )
 }
 

@@ -11,3 +11,15 @@ export async function decodeVin(vin) {
 
     return response.json()
 }
+
+export async function getAllVariables() {
+    const response = await fetch(
+        `${API_URL}/getvehiclevariablelist?format=json`
+    )
+
+    if (!response.ok) {
+        throw new Error(`HTTP error: ${response.status}`)
+    }
+
+    return response.json()
+}

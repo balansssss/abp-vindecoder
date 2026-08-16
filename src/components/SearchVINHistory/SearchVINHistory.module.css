@@ -18,6 +18,8 @@
 
 .searchHistoryTableLink {
     cursor: pointer;
+    color: var(--cl-black);
+    text-decoration: none;
 }
 
 .searchHistoryTableNumber {

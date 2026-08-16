@@ -62,3 +62,9 @@ a:hover {
   animation: loading 1s ease-in-out infinite alternate;
   font-size: 24px;
 }
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
