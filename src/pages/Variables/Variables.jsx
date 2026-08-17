@@ -11,7 +11,7 @@ export function Variables() {
             <ul className={styles.variablesList}>
                 {variables.map(item => {
                     return <li key={item.ID}>
-                        <Link to={`/variables/${item.ID}`} className={styles.variablesListItemLink}><b>[{item.Name}]</b></Link>
+                        <Link to={`/variables/${item.ID}`} className={styles.variablesListItemLink}><h2 className={styles.variablesListItemLinkTitle}>[{item.Name}]</h2></Link>
                         <div className={styles.variablesListItemDescription} dangerouslySetInnerHTML={{ __html: item.Description }}></div>
                     </li>
                 })}
