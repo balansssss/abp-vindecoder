@@ -13,11 +13,20 @@ export function Variable() {
             <Link className={styles.goback} to='/variables'>Back to all variables</Link>
             { 
                 !variable ? <span>Variable not found</span> :
-                <div className={styles.variable}>
-                    <div><b>Name</b>: {variable.Name}</div>
-                    <div><b>Group Name</b>: {variable.GroupName}</div>
-                    <div><b>Description</b>: <div className={styles.variableDescription} dangerouslySetInnerHTML={{ __html: variable.Description }}></div></div>
-                </div>
+                <dl className={styles.variable}>
+                    <div className={styles.variableWrapper}>
+                        <dt className={styles.variableKey}>Name:</dt>
+                        <h1 className={styles.variableValue}>{variable.Name}</h1>
+                    </div>
+                    <div className={styles.variableWrapper}>
+                        <dt className={styles.variableKey}>Group Name:</dt>
+                        <dd className={styles.variableValue}>{variable.GroupName}</dd>
+                    </div>
+                    <div className={styles.variableWrapper}>
+                        <dt className={styles.variableKey}>Description:</dt>
+                        <dd className={styles.variableDescription + ' ' + styles.variableValue} dangerouslySetInnerHTML={{ __html: variable.Description }}></dd>
+                    </div>
+                </dl>
             }
         </div>
     )

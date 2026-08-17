@@ -25,11 +25,29 @@
     gap: 10px;
 }
 
-.variableDescription p {
+.variableDescription p:not(:first-of-type) {
     margin: 5px 0;
 }
 
 .variableDescription ul {
     margin: 10px 0;
     padding-left: 15px;
+}
+
+.variableWrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.variableKey {
+    font-weight: 600;
+}
+
+.variableValue {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.variableWrapper:has(.variableDescription) {
+    flex-direction: column;
 }
